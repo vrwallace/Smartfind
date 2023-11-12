@@ -1,0 +1,223 @@
+object Form1: TForm1
+  Left = 642
+  Height = 587
+  Top = 150
+  Width = 743
+  BorderStyle = bsSingle
+  Caption = 'Smart Find by Von Wallace Ver .12'
+  ClientHeight = 587
+  ClientWidth = 743
+  Position = poScreenCenter
+  LCLVersion = '1.6.4.0'
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 166
+    Top = 16
+    Width = 721
+    Caption = 'Items to Match'
+    ClientHeight = 141
+    ClientWidth = 717
+    TabOrder = 0
+    object MemoMatches: TMemo
+      Left = 8
+      Height = 130
+      Top = 0
+      Width = 704
+      ScrollBars = ssAutoBoth
+      TabOrder = 0
+      WordWrap = False
+    end
+  end
+  object Label1: TLabel
+    Left = 32
+    Height = 20
+    Top = 288
+    Width = 45
+    Caption = 'Source'
+    ParentColor = False
+  end
+  object SpinEditPercent: TSpinEdit
+    Left = 216
+    Height = 28
+    Top = 200
+    Width = 50
+    MinValue = 1
+    TabOrder = 1
+    Value = 50
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 20
+    Top = 200
+    Width = 189
+    Caption = 'Match Percent Requirements'
+    ParentColor = False
+  end
+  object EditSourcedir: TEdit
+    Left = 129
+    Height = 28
+    Top = 288
+    Width = 384
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object Label3: TLabel
+    Left = 32
+    Height = 20
+    Top = 320
+    Width = 76
+    Caption = 'Destination'
+    ParentColor = False
+  end
+  object Editdestinationdir: TEdit
+    Left = 128
+    Height = 28
+    Top = 320
+    Width = 385
+    Enabled = False
+    ReadOnly = True
+    TabOrder = 3
+  end
+  object Buttonss: TButton
+    Left = 544
+    Height = 25
+    Top = 288
+    Width = 141
+    Caption = 'Select Source'
+    OnClick = ButtonssClick
+    TabOrder = 4
+  end
+  object Buttonst: TButton
+    Left = 544
+    Height = 25
+    Top = 320
+    Width = 141
+    Caption = 'Select Destination'
+    Enabled = False
+    OnClick = ButtonstClick
+    TabOrder = 5
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Height = 160
+    Top = 424
+    Width = 721
+    Caption = 'Results'
+    ClientHeight = 135
+    ClientWidth = 717
+    TabOrder = 6
+    OnClick = GroupBox2Click
+    object MemoResults: TMemo
+      Left = 8
+      Height = 130
+      Top = 0
+      Width = 704
+      Lines.Strings = (
+        ''
+      )
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 0
+      WordWrap = False
+    end
+  end
+  object Buttongo: TButton
+    Left = 552
+    Height = 25
+    Top = 376
+    Width = 47
+    Caption = 'Go'
+    OnClick = ButtongoClick
+    TabOrder = 7
+  end
+  object Button1: TButton
+    Left = 624
+    Height = 25
+    Top = 376
+    Width = 47
+    Caption = 'Stop'
+    OnClick = Button1Click
+    TabOrder = 8
+  end
+  object CheckBoxrecursive: TCheckBox
+    Left = 200
+    Height = 24
+    Top = 232
+    Width = 86
+    Caption = 'Recursive'
+    TabOrder = 9
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 60
+    Top = 352
+    Width = 517
+    Caption = 'All files found in source directories that match will be copied to this directory, '#13#10'if Find and Copy is selected; It will not recreate the source directory '#13#10'structure in the destination.'
+    ParentColor = False
+  end
+  object RadioButtonfind: TRadioButton
+    Left = 104
+    Height = 24
+    Top = 232
+    Width = 52
+    Caption = 'Find'
+    Checked = True
+    OnClick = RadioButtonfindClick
+    TabOrder = 11
+    TabStop = True
+  end
+  object RadioButtonfindandcopy: TRadioButton
+    Left = 104
+    Height = 24
+    Top = 256
+    Width = 119
+    Caption = 'Find and Copy'
+    OnClick = RadioButtonfindandcopyClick
+    TabOrder = 10
+  end
+  object Label5: TLabel
+    Left = 32
+    Height = 20
+    Top = 232
+    Width = 49
+    Caption = 'Actions'
+    ParentColor = False
+  end
+  object ComboBoxignore: TComboBox
+    Left = 456
+    Height = 28
+    Top = 200
+    Width = 152
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'Source file names'
+      'Items to Match'
+      'Both'
+      'Neither'
+    )
+    Style = csDropDownList
+    TabOrder = 12
+    Text = 'Source file names'
+  end
+  object Label6: TLabel
+    Left = 280
+    Height = 20
+    Top = 200
+    Width = 162
+    Caption = 'Ignore file extensions on'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 616
+    Height = 20
+    Top = 200
+    Width = 118
+    Caption = '(After last period)'
+    ParentColor = False
+  end
+  object SelectDirectoryDialog1: TSelectDirectoryDialog
+    left = 656
+    top = 224
+  end
+end
