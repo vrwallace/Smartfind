@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Spin, strutils, Math, LCLProc;
+  Spin, strutils, Math, LCLProc,lazfileutils,lazutils,LazUTF8;
 
 type
 
@@ -350,6 +350,7 @@ begin
   memoresults.Lines.add('Complete!');
   statusstateenable(True);
 end;
+
 
 
 
